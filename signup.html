@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <div id="main">
+        <div id="login">Sign In | Create an Account</div>
+        <p id="detail">Enter your Details to ge started</p>
+        
+        <form>
+            <input id="username" placeholder="Full Name" type="text" required>
+            <input id="useremail" placeholder="Email" type="text" required>
+            <input id="password" placeholder="Password" required>
+            <input id="submit" type="submit" value="Next">
+        </form>
+        
+        <div id="container">
+            By tapping Next you, agree to our
+            <span>
+                <a href="policy.html">Privacy policy</a>
+            </span>
+            and 
+            <span>
+                <a href="term.html">Term & Condition</a>
+            </span>
+        </div>
+        <div id="account">All ready have an account?<a href="login.html">Log In</a></div>
+    </div>
+</body>
+</html>
+
+<script>
+    var form= document.querySelector("form");
+
+    // write a function to catch all values
+    form.addEventListener("submit", function(event){
+        event.preventDefault();
+        var Data={
+            username: form.username.value,
+            email: form.useremail.value,
+            password: form.password.value,
+        }
+        
+        // store in localStorage
+        localStorage.setItem("userData", JSON.stringify(Data));
+        alert("😊 Sign Up successfully")
+
+    })
+</script>

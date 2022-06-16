@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div id="main">
+        <div id="login">Sign In</div>
+        <p id="detail">Enter your Login ID to get started</p>
+        
+        <form>
+            <input id="useremail" placeholder="Email" type="text" required>
+            <input id="password" placeholder="Password" required>
+            <input id="submit" type="submit" value="Next">
+        </form>
+        
+        <div id="container">
+            By tapping Next you, agree to our
+            <span>
+                <a href="policy.html">Privacy policy</a>
+            </span>
+            and 
+            <span>
+                <a href="term.html">Term & Condition</a>
+            </span>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    var form= document.querySelector("form");
+
+    // catch the data from localStorage
+    var userData2= JSON.parse(localStorage.getItem("userData"));
+
+
+    form.addEventListener("submit", function(event){
+        event.preventDefault();
+        var Data={
+            email: form.useremail.value,
+            password: form.password.value,
+        }
+        
+        // conditions for user 
+        if(userData2===null){
+            alert("Please create an account");
+        }
+        else if(userData2.email==Data.email && userData2.password==Data.password){
+            alert("SignIn Successful");
+            localStorage.setItem("nextStep", JSON.stringify(userData2)) 
+            window.location.href="navbar.html";
+        }
+        else
+        {
+            alert("User Doesn't Exist");
+        }        
+        window.location.href="yourOrders.html"
+    })
+</script>

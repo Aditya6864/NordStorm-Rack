@@ -1,0 +1,239 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+#upper-nav {
+    text-align: center;
+    background-color: rgb(215, 99, 4);
+    color: white;
+    font-size: 20px;
+    padding: 10px; 
+}
+.nav > img {
+    max-width: 100px;
+    padding: 30px;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-user{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+.nav-user>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 30px;
+}
+
+.cart-user>i{
+    color: rgb(12, 97, 128);
+    margin-right: 5px;
+}
+
+.cart-user>a{
+    color: rgb(92, 92, 92);
+    margin: 0px;
+    font-size: 15px;
+}
+
+.login-user>i{
+    margin-right: 5px;
+    color: rgb(12, 97, 128);
+}
+
+/*   login button hover */
+.btn-login{
+    position: relative;
+    display: inline-block;
+}
+.btn-login a{
+    display: block;
+    color: rgb(92, 92, 92);
+    font-size: 15px;
+    line-height: 30px;    
+}
+.user-hover-login{    
+    width: 200px;
+    position: absolute;
+    list-style-type: none;
+    top: 20px;
+    right: -50px;
+    border-top: 3px solid rgb(12, 97, 128);
+    padding: 10px;
+    visibility: hidden;
+}
+.btn-login:hover .user-hover-login{
+    display: block;
+}
+.btn-login:hover .user-hover-login{
+    display: flex;
+    flex-direction: column; 
+    background-color: white;
+    box-shadow: rgb(0 0 0 / 26%) 0px 8px 16px;
+    top: 30px;
+    opacity: 1;
+    visibility: visible;
+    transition: .3s linear;
+}
+.btn-login:hover .user-hover-login > li{
+    position: relative;
+}
+.user-hover-login>li{
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.62;
+    color: rgb(119, 119, 119);
+}
+
+.user-hover-login>li>a:hover{
+    color: rgb(12, 97, 128);
+}
+
+.login-button{
+    background-color: rgb(12, 97, 128);
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    padding: 10px 30px 10px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn-login>a{
+    color: rgb(92, 92, 92);
+    margin: 0px;
+    font-size: 15px;
+}
+/* **************************************************************** */
+
+
+.user-search{
+    width: 70%;
+}
+input{
+    width: 80%;
+    padding: 15px;
+    margin: 8px 0;
+    border: .5px solid rgba(152, 152, 152, .5);
+}
+
+input:focus {
+	outline: none;
+  	border: .5px solid rgba(0, 175, 239, .5);
+}
+
+.search-nav-btn{
+    background-color: rgb(12, 97, 128);
+    color: white;
+    padding: 15px;
+    border: none;
+}
+.search-nav-btn:hover{
+    background-color: rgb(21, 172, 226);
+    color: white;
+    padding: 15px;
+    border: none;
+}
+.user-category{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    margin-left: 7%;
+}
+.user-category> li > a{
+    color: rgb(92, 92, 92);
+    font-weight: 600;
+    margin-left: 3px;
+}
+.user-category> li .active{
+    color: rgb(12, 97, 128);
+    font-weight: 600;
+    margin-left: 3px;
+}
+.user-category-container{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: 1px solid rgb(234, 234, 234);
+    box-shadow: rgb(0 0 0 / 10%) 0px 3px 6px;
+}
+
+/* sticky Header */
+.sticky {
+    background-color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  /* ........................ */
+
+.category{
+    position: relative;
+    display: inline-block;
+    margin-left: 30px;
+}
+.category a{
+    display: block;
+    color: white;
+    margin-left: 30px;
+    
+}
+.user-hover-list{
+    position: absolute;
+    top: 20px;
+    border-top: 3px solid rgb(12, 97, 128);
+    padding: 10px 30px;
+    visibility: hidden;
+    
+}
+.category:hover .user-hover-list{
+    display: block;
+}
+.category:hover .user-hover-list{
+    display: flex;
+    align-items: flex-start; 
+    background-color: white;
+    box-shadow: rgb(0 0 0 / 26%) 0px 8px 16px;
+    top: 15px;
+    left: -50px;
+    opacity: 1;
+    visibility: visible;
+    transition: .3s linear;
+}
+
+.category:hover .user-hover-list > div{
+    position: relative;
+}
+.user-hover-list>div{
+    width: 200px;
+    
+}
+.user-hover-list>div>a{
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 2;
+    color: rgb(119, 119, 119);
+}
+.user-hover-list>div>p{
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 30px;
+    margin-bottom: 10px;
+    color: rgb(12, 97, 128);
+}
+.user-hover-list>div>a:hover{
+    color: rgb(12, 97, 128);
+}
+.btn-login > a {
+    font-size: 20px;
+}
+.cart-user > a {
+    font-size: 20px;
+}
